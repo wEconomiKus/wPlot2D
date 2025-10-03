@@ -11,22 +11,19 @@ It provides essential features such as axes, labels, titles, legends, and annota
 export high-quality graphics for reports, teaching, or research. The library is built with a modular design,
 making it easy to integrate into existing C++ projects. Its focus is on clarity, precision, and reproducibility,
 providing an accessible tool for academic and scientific work.
-<br>
-<strong>Download the executable on Itch.io:</strong> [https://weconomikus.itch.io/wPlot2D](https://weconomikus.itch.io/wPlot2D)
 </div>
 
 
 ## Author
 
-Created by **Wilfried Koch** on 25-10-02  
-Last updated on 2025-10-02, 21:26:15  
-**Page:** [https://weconomikus.github.io/wilfried-koch-page/](https://weconomikus.github.io/wilfried-koch-page/)  
-**Email:** koch.wilfried@uqam.ca
+Created by [**Wilfried Koch**](https://weconomikus.github.io/wilfried-koch-page/) on 25-10-02  
+Last updated on 2025-10-02, 21:47:46  
 
 
 ## Documentation
 
-- Doxygen (html): https://weconomikus.github.io/wilfried-koch-page/wPlot2D
+- Download the executable on [Itch.io](https://weconomikus.itch.io/wPlot2D)
+- Webpage and Doxygen documentation ([html](https://weconomikus.github.io/wilfried-koch-page/wPlot2DPage/wPlot2D))
 - Doxygen (pdf): `./project/Resources/Doc/doxygen_wPlot2D_v0.0.0.pdf`
 - Main documentation (pdf): `TBD`
 
