@@ -5,6 +5,8 @@
 
 #include "wPaddingComponent.hpp"
 
+#include <stdexcept>
+
 namespace wEngine
 {
 
