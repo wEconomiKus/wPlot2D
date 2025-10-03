@@ -1,9 +1,13 @@
 /**
- * @file wPositionComponent.cpp
- * @brief Implementation of the PositionComponent class.
+ * @file wLengthComponent.cpp
+ * @brief Implementation of the LengthComponent class.
  */
 
-#include "wPositionComponent.hpp"
+#include "wLengthComponent.hpp"
+
+#include <stdexcept>
+#include <string>
+
 
 namespace wEngine
 {
@@ -14,11 +18,10 @@ namespace wEngine
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
 */
 
-PositionComponent::PositionComponent( sf::Vector2f position )
-:	mPosition{ position },
-	mLastPosition{ position }
+LengthComponent::LengthComponent( float length )
+:	mLength{ length }
 {
-
+	validatePositive( length );
 }
 
 /*
@@ -27,20 +30,15 @@ PositionComponent::PositionComponent( sf::Vector2f position )
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
 */
 
-sf::Vector2f PositionComponent::getPosition( ) const
+float LengthComponent::getLength( ) const
 {
-	return mPosition;
+	return mLength;
 }
 
-sf::Vector2f PositionComponent::getLastPosition( ) const
+void LengthComponent::setLength( float newLength )
 {
-	return mLastPosition;
-}
-
-void PositionComponent::setPosition( sf::Vector2f newPosition )
-{
-	mLastPosition = mPosition;
-	mPosition = newPosition;
+	validatePositive( newLength );
+	mLength = newLength;
 }
 
 /*
@@ -49,21 +47,23 @@ void PositionComponent::setPosition( sf::Vector2f newPosition )
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
 */
 
-void PositionComponent::move( const sf::Vector2f& offset )
+void LengthComponent::debugPrint( ) const
 {
-	mLastPosition = mPosition;
-	mPosition += offset;
+	std::cout << "Length: " << getLength( ) << "\n";
 }
 
 /*
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
--> Méthodes public : debug.
+-> Private method: internal validation.
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
 */
 
-void PositionComponent::debugPrint( ) const
+void LengthComponent::validatePositive( float value ) const
 {
-	std::cout << "Position: (" << getPosition( ).x << ", " << getPosition( ).y << ")\n";
+	if (value <= 0.0f)
+	{
+		throw std::invalid_argument( "LengthComponent error: length must be strictly positive (received: " + std::to_string( value ) + ")" );
+	}
 }
 
 }//End of namespace wEngine
