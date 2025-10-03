@@ -7,7 +7,7 @@
 
 All notable changes to this project will be documented in this file.  
 
-## [0.0.0] - octobre 02, 2025
+## [0.0.0] - October 02, 2025
 
 ### Added
 - Initial project setup  
