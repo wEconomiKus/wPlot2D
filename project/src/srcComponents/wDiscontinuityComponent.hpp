@@ -25,6 +25,10 @@ namespace wEngine
 	 * where a function should not be drawn (e.g., around asymptotes or undefined values).
 	 * During rendering, points falling inside these intervals are skipped to avoid
 	 * unwanted connections across discontinuities.
+	 * 
+	 * @author Wilfried Koch
+	 * @copyright © 2025 Wilfried Koch. All rights reserved.
+	 * 
 	 */
 	class DiscontinuityComponent : public Component
 	{
