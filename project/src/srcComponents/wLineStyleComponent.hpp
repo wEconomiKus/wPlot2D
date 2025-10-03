@@ -19,6 +19,10 @@ namespace wEngine
 	 *
 	 * This component controls how lines are drawn in the rendering pipeline.
 	 * For dotted and dashed styles, both dash length and gap length can be configured.
+	 * 
+	 * @author Wilfried Koch
+	 * @copyright © 2025 Wilfried Koch. All rights reserved.
+	 * 
 	 */
 	class LineStyleComponent : public Component
 	{

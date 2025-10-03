@@ -23,6 +23,10 @@ namespace wEngine
 	 * This component wraps a `std::function< double( double ) >` and provides
 	 * an interface to evaluate the function at any given x-coordinate.
 	 * It is mainly used by FunctionEntity to render mathematical curves.
+	 * 
+	 * @author Wilfried Koch
+	 * @copyright © 2025 Wilfried Koch. All rights reserved.
+	 * 
 	 */
 	class FunctionComponent : public Component
 	{
