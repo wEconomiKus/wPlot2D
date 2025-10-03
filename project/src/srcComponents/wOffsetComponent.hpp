@@ -35,6 +35,7 @@ namespace wEngine
 	 *
 	 * @author Wilfried Koch
 	 * @copyright © 2025 Wilfried Koch. All rights reserved.
+	 * 
 	 */
 	class OffsetComponent : public Component
 	{
