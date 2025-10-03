@@ -8,9 +8,7 @@ Copyright @ 2025 Wilfried Koch. All rights reserved.
 #ifndef W_ENTITY_HPP
 #define W_ENTITY_HPP
 
-#include <vector>
 #include <memory>
-#include <typeindex>
 #include <unordered_map>
 #include <stdexcept>
 #include <type_traits>
