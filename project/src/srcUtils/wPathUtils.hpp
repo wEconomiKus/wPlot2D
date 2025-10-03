@@ -39,6 +39,7 @@ namespace wEngine
 	 *
 	 * @author Wilfried Koch
 	 * @copyright © 2025 Wilfried Koch. All rights reserved.
+	 * 
 	 */
 	class PathUtils
 	{
@@ -55,7 +56,7 @@ namespace wEngine
 			 *
 			 * @throws std::runtime_error if the path cannot be resolved.
 			 */
-			static std::string getExecutablePath( );
+			[[nodiscard]] static std::string getExecutablePath( );
 
 			/**
 			 * @brief Returns the directory containing the current executable.
@@ -66,7 +67,7 @@ namespace wEngine
 			 *
 			 * @throws std::runtime_error if the path cannot be resolved.
 			 */
-			static std::string getExecutableDir( );
+			[[nodiscard]] static std::string getExecutableDir( );
 	};
 
 }//End of namespace wEngine
