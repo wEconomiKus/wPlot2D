@@ -143,7 +143,7 @@ namespace wPlot2D
 			 * @brief Gets the current title offset.
 			 * @return Offset vector in pixels.
 			 */
-			sf::Vector2f getTitleOffset( ) const;
+			[[nodiscard]] sf::Vector2f getTitleOffset( ) const;
 
 			/**
 			 * @brief Adds notches along the axis.
@@ -187,7 +187,7 @@ namespace wPlot2D
 			 * @brief Gets the current offset of all labels.
 			 * @return Vector of offsets (one per label).
 			 */
-			std::vector< sf::Vector2f > getLabelsOffset( ) const;
+			[[nodiscard]] std::vector< sf::Vector2f > getLabelsOffset( ) const;
 
 			/**
 			 * @brief Sets a new offset for all labels.
