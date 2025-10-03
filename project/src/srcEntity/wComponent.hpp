@@ -26,6 +26,7 @@ namespace wEngine
 	 * 
 	 * Created by Wilfried Koch. <br>
 	 * Copyright @ 2025 Wilfried Koch. All rights reserved.
+	 * 
 	 */
 	class Component
 	{
