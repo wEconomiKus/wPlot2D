@@ -4,7 +4,6 @@
  */
 
 #include "wColorComponent.hpp"
-#include <iostream>
 
 namespace wEngine
 {

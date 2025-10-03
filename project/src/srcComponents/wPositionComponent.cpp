@@ -5,8 +5,6 @@
 
 #include "wPositionComponent.hpp"
 
-#include <iostream>
-
 namespace wEngine
 {
 
