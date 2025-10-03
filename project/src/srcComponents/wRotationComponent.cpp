@@ -36,4 +36,15 @@ float RotationComponent::getAngle( ) const
 	return mAngle;
 }
 
+/*
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+-> Méthodes public : debug.
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+*/
+
+void RotationComponent::debugPrint( ) const
+{
+	std::cout << "Rotation angle: " << getAngle( ) << " degrees\n";
+}
+
 }//End of namespace wEngine

@@ -56,6 +56,11 @@ namespace wEngine
 			 */
 			[[nodiscard]] float getAngle( ) const;
 
+			/**
+			 * @brief Outputs the current angle value to the console for debugging.
+			 */
+			void debugPrint( ) const;
+
 		private:
 			float mAngle;
 	};
