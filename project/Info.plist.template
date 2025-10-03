@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Informations générales -->
+    <key>CFBundleExecutable</key>
+    <string>{{PROJECT_NAME}}</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.{{AUTHOR}}.{{PROJECT_NAME}}</string>
+    <key>CFBundleName</key>
+    <string>{{PROJECT_NAME}}</string>
+    <key>CFBundleShortVersionString</key>
+    <string>{{VERSION}}</string>
+    <key>CFBundleVersion</key>
+    <string>{{BUILD}}</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+        <string>en</string>
+        <string>fr</string>
+    </array>
+
+    <!-- Informations système -->
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleSignature</key>
+    <string>{{PROJECT_NAME}}</string>
+    <key>CFBundleIconFile</key>
+    <string>{{PROJECT_NAME}}</string>
+
+    <!-- Informations complémentaires -->
+    <key>NSHumanReadableCopyright</key>
+    <string>{{COPYRIGHT}}</string>
+    <key>NSLicenseFile</key>
+    <string>Licenses/licence.txt</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+
+    <!-- Plateforme et architecture -->
+    <key>Platform</key>
+    <string>{{PLATFORM}}</string>
+    <key>Architecture</key>
+    <string>{{ARCH}}</string>
+</dict>
+</plist>

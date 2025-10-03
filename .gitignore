@@ -1,0 +1,19 @@
+
+# Ignore makefiles
+makefile
+project/makefile
+project/doc/makefile
+
+# Ignore build output and temporary files
+*.DS_Store
+project/compilFiles/
+project/doc/doc/
+Doxyfile.bak
+references/
+project/*.app/
+
+# Ignore LaTeX
+latex/
+
+# Ignore Simple C++
+cpp/
