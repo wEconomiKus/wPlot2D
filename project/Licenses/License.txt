@@ -1,0 +1,25 @@
+This software is proprietary and is **NOT open source**.
+
+License Summary:  
+- You are allowed to use the precompiled binaries and libraries of this software
+for personal, academic, or research purposes.
+- Redistribution of the binaries is permitted only if they remain unmodified
+and include this license and copyright notice.
+- The source code is provided for reference only. You are NOT allowed to copy,
+modify, fork, or distribute the source code, in whole or in part, without
+explicit written permission from the author.
+- Access to the source code does not grant any license or rights to use,
+copy, modify, or distribute it, except as expressly stated herein.
+
+Restrictions:  
+- Commercial use of the software (binaries or source) requires explicit written
+permission from the author.
+- Any attempt to relicense, sublicense, or sell this software, in whole or in
+part, is strictly prohibited.
+
+Disclaimer: This software is provided "as is", without warranty of any kind, express or implied, including but not limited to the
+warranties of **merchantability**, **fitness for a particular purpose**, and **noninfringement**. In no event shall the author be liable
+for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection 
+with the software or the use or other dealings in the software.
+
+For inquiries or permissions, please contact: koch.wilfried@uqam.ca
