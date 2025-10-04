@@ -1,6 +1,6 @@
 <p align=center> <img src="project/Resources/Images/wPlot2D_logo.png" alt="Project Logo" width="500"/> </p>
 
-![Version](https://img.shields.io/badge/version-0.0.0-blue) &nbsp;
+![Version](https://img.shields.io/badge/version-0.1.0-blue) &nbsp;
 ![License](https://img.shields.io/badge/license-Proprietary-lightgrey)
 
 # wPlot2D
@@ -17,14 +17,14 @@ providing an accessible tool for academic and scientific work.
 ## Author
 
 Created by [**Wilfried Koch**](https://weconomikus.github.io/wilfried-koch-page/) on 25-10-02  
-Last updated on 2025-10-02, 21:47:46  
+Last updated on 2025-10-04, 13:49:27  
 
 
 ## Documentation
 
 - Download the executable on [Itch.io](https://weconomikus.itch.io/wPlot2D)
 - Webpage and Doxygen documentation ([html](https://weconomikus.github.io/wilfried-koch-page/wPlot2DPage/wPlot2D))
-- Doxygen (pdf): `./project/Resources/Doc/doxygen_wPlot2D_v0.0.0.pdf`
+- Doxygen (pdf): `./project/Resources/Doc/doxygen_wPlot2D_v0.1.0.pdf`
 - Main documentation (pdf): `TBD`
 
 
