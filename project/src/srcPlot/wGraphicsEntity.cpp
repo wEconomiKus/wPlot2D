@@ -26,7 +26,7 @@ namespace wPlot2D
 GraphicsEntity::GraphicsEntity( const std::string& windowTitle, const sf::Vector2u& windowSize,
 	const sf::Vector2f& originFactor, const sf::Vector2f& scaleFactor )
 {
-	mAssets.LoadFont( "Courier", wEngine::PathUtils::getExecutableDir( ) + "/../Resources/Fonts/CourierPrimeCode.ttf" );
+	mAssets.LoadFont( "Courier", wEngine::PathUtils::getExecutableDir( ) + "/../Resources/Fonts/CourierPrimeCode/CourierPrimeCode.ttf" );
 	mAssets.LoadFont( "Inconsolata", wEngine::PathUtils::getExecutableDir( ) + "/../Resources/Fonts/Inconsolata/Inconsolata.otf" );
 
 	validateNormalizedFactor( originFactor );
