@@ -1,7 +1,10 @@
 <p align=center> <img src="project/Resources/Images/wPlot2D_logo.png" alt="Project Logo" width="500"/> </p>
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue) &nbsp;
-![License](https://img.shields.io/badge/license-Proprietary-lightgrey)
+![License](https://img.shields.io/badge/license-Proprietary-lightgrey) &nbsp;
+![Platform](https://img.shields.io/badge/macOS_arm64-supported-success) &nbsp;
+![Platform](https://img.shields.io/badge/macOS_x86_64-supported-success) &nbsp;
+![Platform](https://img.shields.io/badge/Windows_x86_64-supported-success) &nbsp;
 
 # wPlot2D
 
@@ -17,7 +20,7 @@ providing an accessible tool for academic and scientific work.
 ## Author
 
 Created by [**Wilfried Koch**](https://weconomikus.github.io/wilfried-koch-page/) on 25-10-02  
-Last updated on 2025-10-04, 13:49:27  
+Last updated on 2025-10-09, 22:57:57  
 
 
 ## Documentation
