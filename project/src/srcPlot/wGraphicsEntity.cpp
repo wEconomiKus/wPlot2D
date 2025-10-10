@@ -26,8 +26,24 @@ namespace wPlot2D
 GraphicsEntity::GraphicsEntity( const std::string& windowTitle, const sf::Vector2u& windowSize,
 	const sf::Vector2f& originFactor, const sf::Vector2f& scaleFactor )
 {
-	mAssets.LoadFont( "Courier", wEngine::PathUtils::getExecutableDir( ) + "/../Resources/Fonts/CourierPrimeCode/CourierPrimeCode.ttf" );
-	mAssets.LoadFont( "Inconsolata", wEngine::PathUtils::getExecutableDir( ) + "/../Resources/Fonts/Inconsolata/Inconsolata.otf" );
+
+	std::string baseDir = wEngine::PathUtils::getExecutableDir( );
+	std::vector< std::string > fontPathsCourier =
+	{
+		baseDir + "/../Resources/Fonts/CourierPrimeCode/CourierPrimeCode.ttf",
+		baseDir + "/../wPlot2D/Resources/Fonts/CourierPrimeCode/CourierPrimeCode.ttf"
+	};
+	std::vector<std::string> fontPathsInconsolata =
+	{
+		baseDir + "/../Resources/Fonts/Inconsolata/Inconsolata.otf",
+		baseDir + "/../wPlot2D/Resources/Fonts/Inconsolata/Inconsolata.otf"
+	};
+
+	mAssets.LoadFont( "Courier", fontPathsCourier );
+	mAssets.LoadFont( "Inconsolata", fontPathsInconsolata );
+
+	// mAssets.LoadFont( "Courier", wEngine::PathUtils::getExecutableDir( ) + "/../Resources/Fonts/CourierPrimeCode/CourierPrimeCode.ttf" );
+	// mAssets.LoadFont( "Inconsolata", wEngine::PathUtils::getExecutableDir( ) + "/../Resources/Fonts/Inconsolata/Inconsolata.otf" );
 
 	validateNormalizedFactor( originFactor );
 
@@ -77,27 +93,15 @@ void GraphicsEntity::setBackgroundColor( const sf::Color& color )
 	mWindow.clear( color );
 }
 
-
-
 void GraphicsEntity::addFont( const std::string& name, const std::string& fileName )
 {
 	mAssets.LoadFont( name, fileName );
 }
 
-
 sf::Font& GraphicsEntity::getFont( const std::string name )
 {
 	return mAssets.getFont( name );
 }
-
-
-
-
-
-
-
-
-
 
 sf::Vector2f GraphicsEntity::getOrigin( ) const
 {
@@ -318,7 +322,7 @@ void GraphicsEntity::saveToFile( const std::string& filename )
 	texture.update( mWindow );
 
 	sf::Image screenshot = texture.copyToImage( );
-	if( !screenshot.saveToFile( filename ) )
+	if( !screenshot.saveToFile( wEngine::PathUtils::getExecutableDir( ) + filename ) )
 	{
 		throw std::runtime_error( "Failed to save window screenshot to " + filename );
 	}
