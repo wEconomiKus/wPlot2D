@@ -13,6 +13,8 @@
 #include "../srcComponents/wNotchIntervalComponent.hpp"
 #include "../srcComponents/wLengthComponent.hpp"
 
+#include<cmath>
+
 namespace wPlot2D
 {
 

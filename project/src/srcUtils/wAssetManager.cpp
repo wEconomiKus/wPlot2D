@@ -31,9 +31,24 @@ void AssetManager::LoadFont( const std::string& name, const std::vector< std::st
 	sf::Font font;
 	bool loaded = false;
 
-	// Temporarily disable SFML's stderr output to suppress repeated warnings.
+#if defined(_WIN32)
+	// On Windows, we cannot reassign stderr, so just skip silencing.
+	for (const auto& path : possiblePaths)
+	{
+		if (font.openFromFile( path ))
+		{
+			loaded = true;
+			break;
+		}
+	}
+#else
+	// On Unix/macOS, temporarily silence SFML error output.
 	FILE* old_stderr = stderr;
-	stderr = fopen("/dev/null", "w");
+	FILE* nullout = fopen( "/dev/null", "w" );
+	if (nullout)
+	{
+		stderr = nullout;
+	}
 
 	// Try all possible paths until one succeeds.
 	for (const auto& path : possiblePaths)
@@ -45,14 +60,19 @@ void AssetManager::LoadFont( const std::string& name, const std::vector< std::st
 		}
 	}
 
-	// Restore normal stderr output.
-	fclose(stderr);
-	stderr = old_stderr;
+	if (nullout)
+	{
+		// Restore normal stderr output.
+		fclose( stderr );
+		stderr = old_stderr;
+	}
+#endif
 
 	// If no path succeeded, build a detailed error message.
 	if (!loaded)
 	{
 		std::string msg = "AssetManager error: unable to load font '" + name + "' from any of the following paths:\n";
+
 		for (const auto& p : possiblePaths)
 		{
 			msg += "  - " + p + "\n";
@@ -76,7 +96,6 @@ void AssetManager::RemoveFont( const std::string& name )
 	EnsureExists( mFont, name, "Font" );
 	mFont.erase( name );
 }
-
 
 void AssetManager::debugPrintFonts( ) const
 {

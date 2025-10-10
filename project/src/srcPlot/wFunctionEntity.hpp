@@ -17,6 +17,8 @@ Copyright @ 2025 Wilfried Koch. All rights reserved.
 #include <SFML/Graphics.hpp>
 #pragma GCC diagnostic pop
 
+#include <functional>
+
 #include "../srcComponents/wLineStyleComponent.hpp"
 
 namespace wPlot2D

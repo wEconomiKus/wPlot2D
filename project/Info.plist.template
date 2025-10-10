@@ -33,7 +33,7 @@
     <key>NSHumanReadableCopyright</key>
     <string>{{COPYRIGHT}}</string>
     <key>NSLicenseFile</key>
-    <string>Licenses/licence.txt</string>
+    <string>Licenses/license.txt</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
 

@@ -12,6 +12,7 @@ project/doc/doc/
 Doxyfile.bak
 references/
 project/*.app/
+project/windows
 
 # Ignore LaTeX
 latex/
