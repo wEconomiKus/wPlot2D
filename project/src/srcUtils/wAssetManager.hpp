@@ -68,6 +68,27 @@ namespace wEngine
 			void LoadFont( const std::string& name, const std::string& fileName );
 
 			/**
+			 * @brief Loads a font by trying multiple possible file paths until success.
+			 *
+			 * This function attempts to load the specified font (`name`) by iterating through
+			 * several possible paths provided in `possiblePaths`.  
+			 * It silences SFML's internal error messages during the process to avoid clutter.
+			 *
+			 * - The function stops at the first successful load.
+			 * - If none of the paths work, it throws a std::runtime_error with the list of paths tested.
+			 * - The successfully loaded font is stored in the internal font map.
+			 *
+			 * @param name Logical name of the font (used as key in the font map).
+			 * @param possiblePaths List of file paths to try (in order of priority).
+			 *
+			 * @throws std::runtime_error if all paths fail to load the font.
+			 *
+			 * @note This approach makes font loading robust across different directory structures,
+			 * such as development (../Resources/Fonts/...) and distribution (../wPlot2D/Resources/Fonts/...).
+			 */
+			void LoadFont( const std::string& name, const std::vector< std::string >& possiblePaths );
+
+			/**
 			 * @brief Retrieves a reference to a previously loaded font.
 			 * @param name The name of the font previously loaded.
 			 * @return Reference to the corresponding sf::Font object.
