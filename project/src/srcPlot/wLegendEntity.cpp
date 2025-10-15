@@ -119,7 +119,7 @@ void LegendEntity::setCharacterSize( unsigned int size )
 	mCharacterSize = size;
 	for (auto& item : mItems)
 	{
-		item.labelText.setCharacterSize( size );
+		item.mLabelText.setCharacterSize( size );
 	}
 }
 
@@ -167,10 +167,10 @@ void LegendEntity::render( sf::RenderWindow& window )
 	// Compute max text dimensions across all items
 	for (auto& item : mItems)
 	{
-		item.labelText.setFont( fontComponent->getFont( ) );
-		item.labelText.setFillColor( color );
+		item.mLabelText.setFont( fontComponent->getFont( ) );
+		item.mLabelText.setFillColor( color );
 
-		sf::FloatRect bounds = item.labelText.getLocalBounds( );
+		sf::FloatRect bounds = item.mLabelText.getLocalBounds( );
 		maxTextWidth = std::max( maxTextWidth, bounds.size.x );
 		maxTextHeight = std::max( maxTextHeight, bounds.size.y );
 	}
@@ -192,22 +192,22 @@ void LegendEntity::render( sf::RenderWindow& window )
 		auto& item = mItems[ i ];
 
 		// Vertical center of this row
-		sf::FloatRect bounds = item.labelText.getLocalBounds( );
-		float yBase = yOffset + i * spacing;
+		sf::FloatRect bounds = item.mLabelText.getLocalBounds( );
+		float yBase = yOffset + static_cast< float >( i ) * spacing;
 
 		// Center origin of the text on its visual bounds
-		item.labelText.setOrigin( {
+		item.mLabelText.setOrigin( {
 			bounds.position.x + bounds.size.x / 2.0f,
 			bounds.position.y + bounds.size.y / 2.0f
 		} );
 
 		// (1) Line: left column, vertically centered
 		sf::Vector2f linePos( lineColumnX, yBase + maxTextHeight / 2.0f );
-		item.line->getComponent< wEngine::PositionComponent >( )->setPosition( linePos );
+		item.mLine->getComponent< wEngine::PositionComponent >( )->setPosition( linePos );
 
 		// (2) Text: right of the line, vertically aligned
 		sf::Vector2f textPos( lineColumnX + lineLength + margin + bounds.size.x / 2.0f, yBase + bounds.size.y / 2.0f );
-		item.labelText.setPosition( textPos );
+		item.mLabelText.setPosition( textPos );
 	}
 
 	// --- Draw frame if enabled ---
@@ -225,8 +225,8 @@ void LegendEntity::render( sf::RenderWindow& window )
 	// --- Draw all items (line + label) ---
 	for (auto& item : mItems)
 	{
-		item.line->render( window );
-		window.draw( item.labelText );
+		item.mLine->render( window );
+		window.draw( item.mLabelText );
 	}
 }
 

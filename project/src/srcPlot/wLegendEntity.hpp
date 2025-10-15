@@ -170,13 +170,13 @@ namespace wPlot2D
 			 */
 			struct LegendItem
 			{
-				std::string label;
-				std::unique_ptr< LineEntity > line;
-				sf::Text labelText;
+				std::string mLabel;
+				std::unique_ptr< LineEntity > mLine;
+				sf::Text mLabelText;
 
 				LegendItem( std::unique_ptr< LineEntity > line, sf::Text&& txt )
-				:	line{ std::move( line ) },
-					labelText{ std::move( txt ) }
+				:	mLine{ std::move( line ) },
+					mLabelText{ std::move( txt ) }
 					{
 
 					}

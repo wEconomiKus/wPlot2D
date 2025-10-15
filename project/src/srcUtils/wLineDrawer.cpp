@@ -65,7 +65,7 @@ float LineDrawer::drawLine( sf::RenderWindow& window, const sf::Vector2f& point1
 	while (traveled < length)
 	{
 		// Position inside the current pattern cycle (using global offset)
-		float localPos = fmod( patternOffset + traveled, patternLength );
+		float localPos = fmodf( patternOffset + traveled, patternLength );
 
 		// How much of the current dash/dot is left to draw
 		float segmentLength = 0.0f;
@@ -107,7 +107,7 @@ float LineDrawer::drawLine( sf::RenderWindow& window, const sf::Vector2f& point1
 	}
 
 	// Update and return the pattern offset so the next call starts aligned
-	return fmod( patternOffset + length, patternLength );
+	return fmodf( patternOffset + length, patternLength );
 }
 
 void LineDrawer::drawPolylineRound( sf::RenderWindow& window, const std::vector< sf::Vector2f >& points, const sf::Color& color, float thickness,
@@ -179,8 +179,8 @@ void LineDrawer::drawPolylineRound( sf::RenderWindow& window, const std::vector<
 			sf::VertexArray arc( sf::PrimitiveType::Triangles );
 			for (unsigned int k = 0; k < arcResolution; ++k)
 			{
-				float a1 = angle1 + k * step;
-				float a2 = angle1 + (k + 1) * step;
+				float a1 = angle1 + static_cast< float >( k ) * step;
+				float a2 = angle1 + (static_cast< float >( k ) + 1) * step;
 
 				// Unit vectors along the arc
 				sf::Vector2f v1( std::cos( a1 ), std::sin( a1 ) );

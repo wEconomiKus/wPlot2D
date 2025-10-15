@@ -27,11 +27,11 @@ std::vector< double > MathUtils::linspace( double start, double end, size_t nbPo
 	}
 
 	std::vector< double > tempVector( nbPoints );
-	double step = (end - start) / (nbPoints - 1);
+	double step = (end - start) / (static_cast< double >( nbPoints ) - 1);
 
 	size_t I = 0;
 	std::generate( tempVector.begin( ), tempVector.end( ),
-		[ start, step, &I ]( ) { double res = start + I * step; I++; return res; });
+		[ start, step, &I ]( ) { double res = start + static_cast< double >( I ) * step; I++; return res; } );
 
 	return tempVector;
 }

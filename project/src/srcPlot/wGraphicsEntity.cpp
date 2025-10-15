@@ -251,7 +251,7 @@ DataPlotEntity* GraphicsEntity::addDataPlot( const std::vector< sf::Vector2f >& 
 
 LegendEntity* GraphicsEntity::addLegend( const sf::Vector2f& position, bool hasFrame )
 {
-	sf::Vector2u windowSize = mWindow.getSize( );
+	sf::Vector2f windowSize = static_cast< sf::Vector2f >( mWindow.getSize( ) );
 	sf::Vector2f pixelPos( position.x * windowSize.x, position.y * windowSize.y );
 
 	mLegend = std::make_unique< LegendEntity >( mAssets.getFont( "Courier" ), pixelPos, hasFrame );
@@ -281,7 +281,7 @@ TitleEntity* GraphicsEntity::initText( const T& text, sf::Vector2f position )
 	auto textEntity = std::make_unique< TitleEntity >( mAssets.getFont( "Courier" ), text, true );
 
 	auto positionComponent = textEntity->template requireComponent< wEngine::PositionComponent >( "GraphicsEntity::addText( )" );
-	sf::Vector2u windowSize = mWindow.getSize( );
+	sf::Vector2f windowSize = static_cast< sf::Vector2f >( mWindow.getSize( ) );
 	sf::Vector2f pixelPos( position.x * windowSize.x, position.y * windowSize.y );
 	positionComponent->setPosition( pixelPos );
 
@@ -398,7 +398,8 @@ void GraphicsEntity::validateNormalizedFactor( const sf::Vector2f& factor ) cons
 
 sf::Vector2f GraphicsEntity::convertNormalizedToPixels( const sf::Vector2f& factor ) const
 {
-	return sf::Vector2f( factor.x * getWindowSize( ).x, factor.y * getWindowSize( ).y );
+	sf::Vector2f windowSize = static_cast< sf::Vector2f >( getWindowSize( ) );
+	return sf::Vector2f( factor.x * windowSize.x, factor.y * windowSize.y );
 }
 
 }//End of namespace wPlot2D
