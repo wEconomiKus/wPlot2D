@@ -50,3 +50,11 @@ All notable changes to this project will be documented in this file.
 - **LineEntity**:  
   - General-purpose line rendering with optional arrowheads.  
   - Reusable for axes, annotations, and custom plot elements.
+
+
+## [0.1.1] - May 28, 2026
+
+### Changed
+- macOS builds now embed the SFML framework runtime path (`rpath`) directly during linking.
+- Removed the requirement to manually patch executables with `install_name_tool`.
+- Improved macOS installation and Gatekeeper instructions.
