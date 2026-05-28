@@ -1,6 +1,6 @@
 <p align=center> <img src="project/Resources/Images/wPlot2D_logo.png" alt="Project Logo" width="500"/> </p>
 
-![Version](https://img.shields.io/badge/version-0.1.0-blue) &nbsp;
+![Version](https://img.shields.io/badge/version-0.1.1-blue) &nbsp;
 ![License](https://img.shields.io/badge/license-Proprietary-lightgrey) &nbsp;
 ![Platform](https://img.shields.io/badge/macOS_arm64-supported-success) &nbsp;
 ![Platform](https://img.shields.io/badge/macOS_x86_64-supported-success) &nbsp;
@@ -20,21 +20,21 @@ providing an accessible tool for academic and scientific work.
 ## Author
 
 Created by [**Wilfried Koch**](https://weconomikus.github.io/wilfried-koch-page/) on 25-10-02  
-Last updated on 2025-10-09, 22:57:57  
+Last updated on 2026-05-28, 13:52:12  
 
 
 ## Documentation
 
 - Download the executable on [Itch.io](https://weconomikus.itch.io/wPlot2D)
 - Webpage and Doxygen documentation ([html](https://weconomikus.github.io/wilfried-koch-page/wPlot2DPage/wPlot2D))
-- Doxygen (pdf): `./project/Resources/Doc/doxygen_wPlot2D_v0.1.0.pdf`
+- Doxygen (pdf): `./project/Resources/Doc/doxygen_wPlot2D_v0.1.1.pdf`
 - Main documentation (pdf): `TBD`
 
 
 ## License
 
 <div align="justify">
-<strong>Copyright @ 2025 Wilfried Koch. All rights reserved.</strong>  
+<strong>Copyright @ 2026 Wilfried Koch. All rights reserved.</strong>  
 
 This software is proprietary and is **NOT open source**.
 
